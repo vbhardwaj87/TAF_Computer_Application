@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Computer Database Application</td>
+        <td>1</td>
+      <td>09 Aug 2021, 23:25</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">AddComputerStepDef.DateFieldsHighlighted()</td>
+              <td>1</td>
+              <td class="duration" data-value="358580100">0.358</td>
+              <td class="duration" data-value="358580100">0.358</td>
+              <td class="duration" data-value="358580100">0.358</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.alphanumericCharactersAreEnteredInTheDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="281905300">0.281</td>
+              <td class="duration" data-value="281905300">0.281</td>
+              <td class="duration" data-value="281905300">0.281</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.clickCancelButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="254795800">0.254</td>
+              <td class="duration" data-value="254795800">0.254</td>
+              <td class="duration" data-value="254795800">0.254</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.companyNameIsSelected()</td>
+              <td>1</td>
+              <td class="duration" data-value="518049400">0.518</td>
+              <td class="duration" data-value="518049400">0.518</td>
+              <td class="duration" data-value="518049400">0.518</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.computerIsAddedToTheDatabase()</td>
+              <td>2</td>
+              <td class="duration" data-value="450978850">0.450</td>
+              <td class="duration" data-value="450978850">0.544</td>
+              <td class="duration" data-value="901957700">0.901</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.computerIsAddedToTheDatabaseWithTheDetailsProvided()</td>
+              <td>1</td>
+              <td class="duration" data-value="48997000">0.048</td>
+              <td class="duration" data-value="48997000">0.048</td>
+              <td class="duration" data-value="48997000">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.computerIsAddedWithoutTheName()</td>
+              <td>1</td>
+              <td class="duration" data-value="246263700">0.246</td>
+              <td class="duration" data-value="246263700">0.246</td>
+              <td class="duration" data-value="246263700">0.246</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.computerNameIsHighlightedAsMandatory()</td>
+              <td>1</td>
+              <td class="duration" data-value="59535200">0.059</td>
+              <td class="duration" data-value="59535200">0.059</td>
+              <td class="duration" data-value="59535200">0.059</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.computerNameIsProvidedWithTheIntroducedAndDiscontinuedDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="321819900">0.321</td>
+              <td class="duration" data-value="321819900">0.321</td>
+              <td class="duration" data-value="321819900">0.321</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.onlyComputerNameIsProvided()</td>
+              <td>2</td>
+              <td class="duration" data-value="568588300">0.568</td>
+              <td class="duration" data-value="568588300">0.576</td>
+              <td class="duration" data-value="1137176600">1.137</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.selectsAddComputer()</td>
+              <td>6</td>
+              <td class="duration" data-value="334187950">0.334</td>
+              <td class="duration" data-value="334187950">0.437</td>
+              <td class="duration" data-value="2005127700">2.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AddComputerStepDef.userTakenToHomepage()</td>
+              <td>1</td>
+              <td class="duration" data-value="76082000">0.076</td>
+              <td class="duration" data-value="76082000">0.076</td>
+              <td class="duration" data-value="76082000">0.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BaseStepDef.setupDriver()</td>
+              <td>11</td>
+              <td class="duration" data-value="2383283209">2.383</td>
+              <td class="duration" data-value="2383283209">3.286</td>
+              <td class="duration" data-value="26216115300">26.216</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BaseStepDef.tearDown(Scenario)</td>
+              <td>11</td>
+              <td class="duration" data-value="901726400">0.901</td>
+              <td class="duration" data-value="901726400">1.233</td>
+              <td class="duration" data-value="9918990400">9.918</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.buttonsToAddComputer()</td>
+              <td>1</td>
+              <td class="duration" data-value="316834900">0.316</td>
+              <td class="duration" data-value="316834900">0.316</td>
+              <td class="duration" data-value="316834900">0.316</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.checkColumnHeadings()</td>
+              <td>1</td>
+              <td class="duration" data-value="161667700">0.161</td>
+              <td class="duration" data-value="161667700">0.161</td>
+              <td class="duration" data-value="161667700">0.161</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.checkTableSorting()</td>
+              <td>1</td>
+              <td class="duration" data-value="864650000">0.864</td>
+              <td class="duration" data-value="864650000">0.864</td>
+              <td class="duration" data-value="864650000">0.864</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.computerTableisDisplayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="122743375">0.122</td>
+              <td class="duration" data-value="122743375">0.139</td>
+              <td class="duration" data-value="490973500">0.490</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.computersCountValidation()</td>
+              <td>1</td>
+              <td class="duration" data-value="97502800">0.097</td>
+              <td class="duration" data-value="97502800">0.097</td>
+              <td class="duration" data-value="97502800">0.097</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.linkDisplayedOnDashboard(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="213609500">0.213</td>
+              <td class="duration" data-value="213609500">0.213</td>
+              <td class="duration" data-value="213609500">0.213</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DashboardStepDef.paginationButtons()</td>
+              <td>1</td>
+              <td class="duration" data-value="812665900">0.812</td>
+              <td class="duration" data-value="812665900">0.812</td>
+              <td class="duration" data-value="812665900">0.812</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditComputerStepDef.computerIsDeletedFromTheApplication()</td>
+              <td>1</td>
+              <td class="duration" data-value="898867100">0.898</td>
+              <td class="duration" data-value="898867100">0.898</td>
+              <td class="duration" data-value="898867100">0.898</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditComputerStepDef.detailsOfSavedComputerAreAmended()</td>
+              <td>1</td>
+              <td class="duration" data-value="504683300">0.504</td>
+              <td class="duration" data-value="504683300">0.504</td>
+              <td class="duration" data-value="504683300">0.504</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditComputerStepDef.searchesForExistingComputer()</td>
+              <td>2</td>
+              <td class="duration" data-value="759945800">0.759</td>
+              <td class="duration" data-value="759945800">0.794</td>
+              <td class="duration" data-value="1519891600">1.519</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditComputerStepDef.updatedDetailsAreSavedInTheApplication()</td>
+              <td>1</td>
+              <td class="duration" data-value="452670300">0.452</td>
+              <td class="duration" data-value="452670300">0.452</td>
+              <td class="duration" data-value="452670300">0.452</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>25</td>
+            <td>56</td>
+            <td class="duration">0.869</td>
+            <td class="duration">26.216</td>
+            <td class="duration">48.679</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

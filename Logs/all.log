@@ -1,0 +1,9 @@
+2021-08-08 18:38:33.400 [main] INFO  Steps.BaseStepDef - ****Initialising WebDriver******
+2021-08-08 18:38:36.765 [main] INFO  Steps.BaseStepDef - Closing down Webdriver
+2021-08-08 18:38:37.417 [main] INFO  Steps.BaseStepDef - ****Initialising WebDriver******
+2021-08-08 18:38:39.778 [main] INFO  Steps.BaseStepDef - Closing down Webdriver
+2021-08-08 18:38:40.404 [main] INFO  Steps.BaseStepDef - ****Initialising WebDriver******
+2021-08-08 18:38:43.592 [main] INFO  Steps.BaseStepDef - Closing down Webdriver
+2021-08-08 18:38:44.232 [main] INFO  Steps.BaseStepDef - ****Initialising WebDriver******
+2021-08-08 18:38:46.798 [main] INFO  Steps.DashboardStepDef - Comparing the Sorting on the Lists
+2021-08-08 18:38:46.988 [main] INFO  Steps.BaseStepDef - Closing down Webdriver
